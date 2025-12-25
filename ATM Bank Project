@@ -1,0 +1,24 @@
+hesap = 500000000
+    cekim = int(input("Çekmek istediğiniz tutarı girin:"))
+
+    if cekim > hesap:
+      print("Hesabınızda o kadar para olmadığı için olmamşıtır")
+    else:
+      hesap -= cekim
+      print("Hesabınızdaki kalan para miktarı:{}".format(hesap))
+
+  elif secim == 2:
+   yatirim = int(input("Yatırmak istediğiniz para miktarı giriniz"))
+   hesap += yatirim
+
+  elif secim == 3:
+    print(f"Hesabınızdaki kalan para: {hesap}")
+
+  elif secim == 4:
+    print("Çıkıs başarıyla yapılmıştır")
+    break
+
+  else:
+    print("2,3 ve ya 4 sayılarını seçiniz")
+    continue
+
