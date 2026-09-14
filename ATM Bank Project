@@ -1,24 +1,35 @@
-hesap = 500000000
-    cekim = int(input("Çekmek istediğiniz tutarı girin:"))
+# BANKA SİMÜLASYONU
+hesap = 1000000
 
+while True:
+  print("""
+               ATM'mize hoş geldiniz!!
+  1)Para Çekme
+  2)Para Yatırma
+  3)Bakiye Bilgisi
+  4)Çıkış
+  """)
+
+  secim = int(input("Lütfen seçiminizi giriniz:"))
+
+  if secim == 1:
+    cekim = int(input("Çekmek istediğiniz tutarı giriniz:"))
     if cekim > hesap:
-      print("Hesabınızda o kadar para olmadığı için olmamşıtır")
+      print("O kadar paran yok")
+      continue
     else:
       hesap -= cekim
-      print("Hesabınızdaki kalan para miktarı:{}".format(hesap))
-
   elif secim == 2:
-   yatirim = int(input("Yatırmak istediğiniz para miktarı giriniz"))
-   hesap += yatirim
-
-  elif secim == 3:
-    print(f"Hesabınızdaki kalan para: {hesap}")
-
-  elif secim == 4:
-    print("Çıkıs başarıyla yapılmıştır")
-    break
-
-  else:
-    print("2,3 ve ya 4 sayılarını seçiniz")
+    yatir = int(input("Yatırmak istediğiniz tutarı giriniz:"))
+    hesap += yatir
     continue
 
+  elif secim == 3:
+     print(f"Bakiyeniz: {hesap}₺")
+     continue
+
+  elif secim == 4:
+    print("Çıkış yaptınız. Görüşmek üzereee (Ya da hiç :)")
+    break
+  else:
+    print("1-4 arası bir rakam seç")
